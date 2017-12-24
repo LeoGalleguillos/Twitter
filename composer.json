@@ -1,0 +1,13 @@
+{
+    "autoload": {
+        "psr-4": {
+            "LeoGalleguillos\\Twitter\\": "src/",
+            "LeoGalleguillos\\TwitterTest\\": "test/"
+        }
+    },
+    "license": "MIT",
+    "name": "leo-galleguillos/twitter",
+    "require": {
+        "zendframework/zend-test": "^3.1"
+    }
+}
