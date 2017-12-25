@@ -9,8 +9,11 @@ class Module
     {
         return [
             'view_helpers' => [
+                'aliases' => [
+                    'shareUrl' => ShareUrlHelper::class,
+                ],
                 'factories' => [
-                    'shareUrl' => ShareUrlHelperFactory::class,
+                    ShareUrlHelper::class => ShareUrlHelperFactory::class,
                 ],
             ],
         ];
