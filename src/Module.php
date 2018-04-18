@@ -2,6 +2,7 @@
 namespace LeoGalleguillos\Twitter;
 
 use LeoGalleguillos\Twitter\Model\Factory\View\Helper\ShareUrl as ShareUrlHelperFactory;
+use LeoGalleguillos\Twitter\Model\Table as TwitterTable;
 use LeoGalleguillos\Twitter\View\Helper\ShareUrl as ShareUrlHelper;
 
 class Module
@@ -24,6 +25,11 @@ class Module
     {
         return [
             'factories' => [
+                TwitterTable\RetweetLog::class => function ($serviceManager) {
+                    return new TwitterTable\RetweetLog(
+                        $this->get('main')
+                    );
+                },
             ],
         ];
     }
