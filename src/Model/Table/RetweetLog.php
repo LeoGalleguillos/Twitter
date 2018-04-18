@@ -23,7 +23,7 @@ class RetweetLog
         $sql = '
             INSERT
               INTO `retweet_log` (`tweet_id`)
-            VALUES ()
+            VALUES (?)
                  ;
         ';
         $parameters = [
