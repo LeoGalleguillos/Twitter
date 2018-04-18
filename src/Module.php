@@ -27,7 +27,7 @@ class Module
             'factories' => [
                 TwitterTable\RetweetLog::class => function ($serviceManager) {
                     return new TwitterTable\RetweetLog(
-                        $this->get('main')
+                        $serviceManager->get('main')
                     );
                 },
             ],
