@@ -63,4 +63,22 @@ class RetweetLogTest extends TableTestCase
             $this->retweetLogTable->selectCount()
         );
     }
+
+    public function testSelectCountWhereTweetId()
+    {
+        $tweetId = 36331797625184256;
+
+        $this->assertSame(
+            0,
+            $this->retweetLogTable->selectCountWhereTweetId($tweetId)
+        );
+
+        $this->retweetLogTable->insert(
+            $tweetId
+        );
+        $this->assertSame(
+            1,
+            $this->retweetLogTable->selectCountWhereTweetId($tweetId)
+        );
+    }
 }

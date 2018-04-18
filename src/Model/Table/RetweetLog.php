@@ -34,7 +34,7 @@ class RetweetLog
                     ->getGeneratedValue();
     }
 
-    public function selectCountWhereTweetId(int $tweetId)
+    public function selectCountWhereTweetId(int $tweetId) : int
     {
         $sql = '
             SELECT COUNT(*) AS `count`
@@ -43,7 +43,7 @@ class RetweetLog
                  ;
         ';
         $row = $this->adapter->query($sql, [$tweetId])->current();
-        return (bool) $row['count'];
+        return (int) $row['count'];
     }
 
     public function selectCount()
