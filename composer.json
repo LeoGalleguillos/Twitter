@@ -9,6 +9,7 @@
     "name": "leo-galleguillos/twitter",
     "require": {
         "zendframework/zend-test": "^3.1",
-        "zendframework/zend-db": "^2.9"
+        "zendframework/zend-db": "^2.9",
+        "abraham/twitteroauth": "^0.7.4"
     }
 }
