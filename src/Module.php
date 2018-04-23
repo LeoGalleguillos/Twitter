@@ -38,6 +38,11 @@ class Module
                         $serviceManager->get('main')
                     );
                 },
+                TwitterTable\TweetLog::class => function ($serviceManager) {
+                    return new TwitterTable\TweetLog(
+                        $serviceManager->get('main')
+                    );
+                },
             ],
         ];
     }
