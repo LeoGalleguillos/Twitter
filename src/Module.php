@@ -30,6 +30,9 @@ class Module
                 TwitterService\Retweet\ShouldRetweetOccur::class => function ($serviceManager) {
                     return new TwitterService\Retweet\ShouldRetweetOccur();
                 },
+                TwitterService\Tweet\ShouldTweetOccur::class => function ($serviceManager) {
+                    return new TwitterService\Tweet\ShouldTweetOccur();
+                },
                 TwitterService\Search::class => function ($serviceManager) {
                     return new TwitterService\Search();
                 },
