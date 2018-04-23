@@ -27,7 +27,7 @@ class TweetLog
                  ;
         ';
         $parameters = [
-            $tweetId,
+            $entityTypeId,
         ];
         return $this->adapter
                     ->query($sql)

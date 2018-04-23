@@ -47,4 +47,38 @@ class TweetLogTest extends TableTestCase
             $this->tweetLogTable
         );
     }
+
+    public function testInsertAndSelectCount()
+    {
+        $this->tweetLogTable->insert(
+            123
+        );
+
+        $this->tweetLogTable->insert(
+            456
+        );
+
+        $this->assertSame(
+            2,
+            $this->tweetLogTable->selectCount()
+        );
+    }
+
+    public function testSelectCountWhereEntityTypeId()
+    {
+        $entityTypeId = 12345;
+
+        $this->assertSame(
+            0,
+            $this->tweetLogTable->selectCountWhereEntityTypeId($entityTypeId)
+        );
+
+        $this->tweetLogTable->insert(
+            $entityTypeId
+        );
+        $this->assertSame(
+            1,
+            $this->tweetLogTable->selectCountWhereEntityTypeId($entityTypeId)
+        );
+    }
 }
