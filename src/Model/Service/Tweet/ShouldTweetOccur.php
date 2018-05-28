@@ -5,6 +5,6 @@ class ShouldTweetOccur
 {
     public function shouldTweetOccur() : bool
     {
-        return (1 == rand(1, 5));
+        return (1 == rand(1, 3));
     }
 }
